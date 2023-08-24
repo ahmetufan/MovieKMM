@@ -77,7 +77,7 @@ fun MovieApp() {
             }
 
             composable(Detail.routeWithArgs, arguments = Detail.arguments){
-                val movieId = it.arguments?.getInt("movieId") ?: 0
+//                val movieId = it.arguments?.getInt("movieId") ?: 0
 
             }
 

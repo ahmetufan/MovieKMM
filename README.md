@@ -20,7 +20,7 @@ Integrates with popular streaming platforms. ✅<br/>
 •	[Ktor](https://ktor.io/) - Used for HTTP communication on both the server and client side. For this project, it was employed to create HTTP client functions that work with KMM on both iOS and Android.<br/>
 •	[Coroutines](https://developer.android.com/kotlin/coroutines?hl=tr) - Utilized for concurrency and asynchronous programming needs. It allows handling asynchronous tasks, like network requests or long-running operations, in a simple and readable manner.<br/>
 •	[Koin](https://insert-koin.io/docs/quickstart/android/) -  A lightweight framework for dependency injection. It makes your code more modular and testable.<br/>
-•	[ViewModel]([https://developer.android.com/topic/libraries/architecture/viewmodel](https://developer.android.com/reference/androidx/lifecycle/ViewModel)) - Used to manage and store application data. It helps in preserving data across configuration changes such as screen rotations.<br/>
+•	[ViewModel](https://developer.android.com/reference/androidx/lifecycle/ViewModel) - Used to manage and store application data. It helps in preserving data across configuration changes such as screen rotations.<br/>
 •	[Lazy Column](https://developer.android.com/jetpack/compose/lists) - Used to display the dashboard<br/> 
 •	[Material Components](https://github.com/material-components/material-components-android/blob/master/docs/getting-started.md) - Material design components like ripple animation, cardView.<br/>
 

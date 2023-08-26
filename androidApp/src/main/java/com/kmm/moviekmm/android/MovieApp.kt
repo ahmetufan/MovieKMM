@@ -15,6 +15,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.kmm.moviekmm.android.detail.DetailScreen
+import com.kmm.moviekmm.android.detail.DetailViewModel
 import com.kmm.moviekmm.android.home.HomeScreen
 import com.kmm.moviekmm.android.home.HomeViewModel
 import com.kmm.moviekmm.android.utils.Detail
@@ -22,6 +24,7 @@ import com.kmm.moviekmm.android.utils.Home
 import com.kmm.moviekmm.android.utils.MovieAppBar
 import com.kmm.moviekmm.android.utils.movieDestinations
 import org.koin.androidx.compose.koinViewModel
+import org.koin.core.parameter.parametersOf
 
 @Composable
 fun MovieApp() {
@@ -77,11 +80,13 @@ fun MovieApp() {
             }
 
             composable(Detail.routeWithArgs, arguments = Detail.arguments){
-//                val movieId = it.arguments?.getInt("movieId") ?: 0
+                val movieId = it.arguments?.getInt("movieId") ?: 0
+                val detailViewModel: DetailViewModel = koinViewModel(
+                    parameters = { parametersOf(movieId.toInt()) }
+                )
 
+                DetailScreen(uiState = detailViewModel.uiState)
             }
-
-
         }
 
     }
